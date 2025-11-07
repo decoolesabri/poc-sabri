@@ -33,10 +33,11 @@ Navigate to the main.py file and edit the "new_reviews" list and add the review 
 
 ## Roadmap
 
-Planned future improvements for this Proof of Concept:
+Based on a feedback session I held with my buddy, I want to add these improvements in the future:
 
 - **Frontend interface** – Add a simple web interface (e.g., using Streamlit or Flask) where users can enter a review and instantly see the predicted sentiment.
+- **Adding a neutral predicition category** - right now the review can be classified as "Positive" and "Negative", in the future I would like to add a "Neutral" sentiment category.
 - **Data expansion** – Train the model on a larger and more diverse dataset of movie reviews to improve generalization.
 - **Language support** – Add multilingual sentiment analysis (e.g., English and Dutch).
 
-These features are not required for the current proof of concept but would make the project more complete and user-friendly in the future.
+These features are not required for the current proof of concept but would make the project more complete and user-friendly in the future. The most important improvements are prioritized at the top.
