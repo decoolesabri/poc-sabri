@@ -1,15 +1,15 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_extraction.text import TfidfVectorizer # zet de tekst om in getallen zodat ML het begrijpt
 
 def load_and_prepare_data():
-    # Pad naar je dataset (zorg dat dit klopt met je mapstructuur)
+    # Pad naar de dataset
     data_path = "data/IMDB Dataset.csv"
 
     # Dataset inladen
     df = pd.read_csv(data_path)
 
-    # Kolommen hernoemen voor duidelijkheid (optioneel)
+    # Kolommen hernoemen
     df.columns = ["review", "sentiment"]
 
     # Alleen 2000 willekeurige reviews gebruiken
@@ -23,7 +23,7 @@ def load_and_prepare_data():
         df_sample["review"], df_sample["sentiment"], test_size=0.2, random_state=42
     )
 
-    # Tekst vectoriseren (omzetten naar numerieke waarden)
+    # Tekst vectoriseren
     vectorizer = TfidfVectorizer(stop_words="english", max_features=1000)
     X_train_tfidf = vectorizer.fit_transform(X_train)
     X_test_tfidf = vectorizer.transform(X_test)

@@ -6,10 +6,6 @@ import joblib
 import os
 
 def train_and_evaluate(X_train, X_test, y_train, y_test, model_dir="models"):
-    """
-    Train twee eenvoudige modellen, evalueer ze en sla het beste model op.
-    Returns: best_model, metrics_dict
-    """
 
     # Model 1: Multinomial Naive Bayes
     nb = MultinomialNB()
@@ -35,7 +31,7 @@ def train_and_evaluate(X_train, X_test, y_train, y_test, model_dir="models"):
         best_acc = acc_nb
         best_report = classification_report(y_test, y_pred_nb)
 
-    # Zorg dat map bestaat en sla model op
+    # Zorg dat de map bestaat en sla het model op
     os.makedirs(model_dir, exist_ok=True)
     model_path = os.path.join(model_dir, f"{best_name}.joblib")
     joblib.dump(best_model, model_path)
