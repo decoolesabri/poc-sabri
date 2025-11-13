@@ -1,0 +1,9 @@
+# Virtuele omgeving
+.venv/
+
+# IDE bestanden
+.idea/
+
+# Python cache en build-bestanden
+__pycache__/
+*.pyc
