@@ -9,7 +9,6 @@ def load_and_prepare_data():
 
     data_path = os.path.join(
         base_dir,
-        "..",
         "data",
         "IMDB Dataset.csv"
     )
