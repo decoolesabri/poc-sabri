@@ -1,10 +1,18 @@
+import os
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer # zet de tekst om in getallen zodat ML het begrijpt
 
 def load_and_prepare_data():
-    # Pad naar de dataset
-    data_path = "data/IMDB Dataset.csv"
+    # Absolute pad naar src/
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+
+    data_path = os.path.join(
+        base_dir,
+        "..",
+        "data",
+        "IMDB Dataset.csv"
+    )
 
     # Dataset inladen
     df = pd.read_csv(data_path)
