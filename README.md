@@ -8,7 +8,7 @@ This project uses the **IMDB Dataset** and applies text preprocessing, TF-IDF ve
 ## Installation
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/movie-sentiment-poc.git
+   git clone https://github.com/decoolesabri/movie-sentiment-poc.git
    ```
 2. Navigate into the project folder
    ```bash
